@@ -1,0 +1,19 @@
+{
+  "name": "ship30-marketplace",
+  "owner": {
+    "name": "Mitch Harris",
+    "url": "https://github.com/heymitch"
+  },
+  "metadata": {
+    "description": "Ship 30 for 30 — write and publish 30 pieces of content in 30 days.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "ship30for30",
+      "description": "Complete Ship 30 for 30 writing system. 35 skills covering atomic essays, headlines, hooks, frameworks, idea generation, editing, and publishing strategy.",
+      "version": "1.0.0",
+      "source": "./plugins/ship30for30"
+    }
+  ]
+}

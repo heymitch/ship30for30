@@ -1,0 +1,10 @@
+{
+  "name": "ship30for30",
+  "version": "1.0.0",
+  "description": "Ship 30 for 30 — write and publish 30 pieces of content in 30 days. 35 skills for writing, editing, and publishing.",
+  "author": {
+    "name": "Mitch Harris"
+  },
+  "license": "UNLICENSED",
+  "keywords": ["writing", "ship30", "atomic-essays", "content", "publishing"]
+}

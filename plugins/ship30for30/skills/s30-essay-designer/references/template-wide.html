@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{HEADLINE}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="{{FONT_IMPORT}}" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+  .card {
+    width: 600px;
+    height: 338px;
+    background: {{BACKGROUND}};
+    border-radius: {{BORDER_RADIUS}};
+    border-top: 4px solid {{PRIMARY}};
+    padding: 36px 40px 28px;
+    font-family: '{{BODY_FONT}}', serif;
+    color: {{TEXT}};
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    overflow: hidden;
+  }
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .handle {
+    font-family: '{{BODY_FONT}}', sans-serif;
+    font-size: 13px;
+    color: {{SECONDARY}};
+    font-weight: 500;
+  }
+  h1 {
+    font-family: '{{HEADING_FONT}}', serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: {{TEXT}};
+    margin-bottom: 16px;
+  }
+  .body {
+    flex: 1;
+    overflow: hidden;
+  }
+  .body p {
+    font-size: 16px;
+    line-height: 1.55;
+    margin: 0.4em 0;
+  }
+  .body p.isolated {
+    margin: 1em 0;
+  }
+  .teaser-fade {
+    position: relative;
+  }
+  .teaser-fade::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: linear-gradient(transparent, {{BACKGROUND}});
+  }
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid {{SECONDARY}}33;
+  }
+  .cta {
+    font-size: 13px;
+    color: {{PRIMARY}};
+    font-weight: 600;
+  }
+  .day-badge {
+    font-size: 11px;
+    font-weight: 600;
+    color: {{PRIMARY}};
+    background: {{PRIMARY}}12;
+    padding: 3px 10px;
+    border-radius: 100px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="card-header">
+    <img class="avatar" src="{{AVATAR_URL}}" alt="" onerror="this.style.display='none'">
+    <span class="handle">{{HANDLE}}</span>
+  </div>
+  <h1>{{HEADLINE}}</h1>
+  <div class="body teaser-fade">
+    {{BODY_HTML}}
+  </div>
+  <div class="card-footer">
+    <span class="cta">Read the full essay &rarr;</span>
+    <span class="day-badge">Day {{DAY_NUMBER}} of 30</span>
+  </div>
+</div>
+</body>
+</html>

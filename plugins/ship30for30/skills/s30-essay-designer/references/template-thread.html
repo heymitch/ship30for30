@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{HEADLINE}} — Thread</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="{{FONT_IMPORT}}" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 2rem;
+    font-family: '{{BODY_FONT}}', serif;
+    color: {{TEXT}};
+  }
+  .thread-card {
+    width: 540px;
+    height: 540px;
+    background: {{BACKGROUND}};
+    border-radius: {{BORDER_RADIUS}};
+    border-top: 4px solid {{PRIMARY}};
+    padding: 40px 44px 32px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    position: relative;
+  }
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+  .author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .handle {
+    font-size: 14px;
+    color: {{SECONDARY}};
+    font-weight: 500;
+  }
+  .tweet-badge {
+    font-size: 12px;
+    font-weight: 700;
+    color: {{PRIMARY}};
+    background: {{PRIMARY}}12;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .thread-card.first h1 {
+    font-family: '{{HEADING_FONT}}', serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: {{TEXT}};
+    margin-bottom: 20px;
+  }
+  .tweet-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .tweet-body p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 0.4em 0;
+  }
+  .tweet-body p.isolated {
+    margin: 1.2em 0;
+  }
+  .tweet-body .subhead {
+    font-family: '{{HEADING_FONT}}', serif;
+    font-weight: 700;
+    color: {{PRIMARY}};
+    margin-top: 1.5em;
+    margin-bottom: 0.4em;
+  }
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid {{SECONDARY}}33;
+  }
+  .footer-handle {
+    font-size: 13px;
+    color: {{SECONDARY}};
+  }
+  .day-badge {
+    font-size: 11px;
+    font-weight: 600;
+    color: {{PRIMARY}};
+    background: {{PRIMARY}}12;
+    padding: 3px 10px;
+    border-radius: 100px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Card 1: Hook tweet with headline -->
+<div class="thread-card first">
+  <div class="card-header">
+    <div class="author">
+      <img class="avatar" src="{{AVATAR_URL}}" alt="" onerror="this.style.display='none'">
+      <span class="handle">{{HANDLE}}</span>
+    </div>
+    <span class="tweet-badge">1/N</span>
+  </div>
+  <h1>{{HEADLINE}}</h1>
+  <div class="tweet-body">
+    {{TWEET_1_HTML}}
+  </div>
+  <div class="card-footer">
+    <span class="footer-handle">{{HANDLE}}</span>
+    <span class="day-badge">Day {{DAY_NUMBER}} of 30</span>
+  </div>
+</div>
+
+<!-- Repeat this block for each additional tweet -->
+<!--
+<div class="thread-card">
+  <div class="card-header">
+    <div class="author">
+      <img class="avatar" src="{{AVATAR_URL}}" alt="" onerror="this.style.display='none'">
+      <span class="handle">{{HANDLE}}</span>
+    </div>
+    <span class="tweet-badge">2/N</span>
+  </div>
+  <div class="tweet-body">
+    {{TWEET_2_HTML}}
+  </div>
+  <div class="card-footer">
+    <span class="footer-handle">{{HANDLE}}</span>
+    <span class="day-badge">Day {{DAY_NUMBER}} of 30</span>
+  </div>
+</div>
+-->
+
+{{THREAD_CARDS_HTML}}
+
+</body>
+</html>
