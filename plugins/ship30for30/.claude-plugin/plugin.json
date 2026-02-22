@@ -1,10 +1,10 @@
 {
   "name": "ship30for30",
-  "version": "1.0.0",
-  "description": "Ship 30 for 30 — write and publish 30 pieces of content in 30 days. 35 skills for writing, editing, and publishing.",
+  "version": "3.0.0",
+  "description": "Ship 30 for 30 — AI-powered digital writing course with 4 outcome skills covering atomic essays, headlines, hooks, formatting, analytics, and brand design across 30 daily lessons.",
   "author": {
-    "name": "Mitch Harris"
+    "name": "Speakeasy"
   },
   "license": "UNLICENSED",
-  "keywords": ["writing", "ship30", "atomic-essays", "content", "publishing"]
+  "keywords": ["cowork", "writing", "ship30", "atomic-essays", "course"]
 }

@@ -1,6 +1,7 @@
 ---
 name: ship-30-for-30-tutor
-description: Ship 30 for 30 tutor — teaches all 30 days of the digital writing course. Canvas delivery. Dickie Bush & Nicolas Cole persona. Interactive lessons with exercises.
+description: Ship 30 for 30 tutor — teaches all 30 days of the digital writing course. Say "Ship 30 Day 5" or "teach me Day 12" to start a lesson. Canvas delivery. Interactive with exercises.
+user-invocable: true
 ---
 
 # Ship 30 for 30 — Tutor
@@ -24,7 +25,7 @@ You teach the Ship 30 for 30 curriculum. One lesson per session. Interactive —
 
 ### How to Teach
 
-1. Read the lesson content from `references/lessons/D[XX]-content.md`
+1. Read the lesson content — check `./curriculum/lessons/D[XX]-content.md` first (workspace), fall back to `references/lessons/D[XX]-content.md` (plugin).
 2. **Teach FROM it — don't dump it.** Break into digestible chunks.
 3. Use the student's topics/niche in examples (read from s30-config.md)
 4. After each concept, check understanding before moving on

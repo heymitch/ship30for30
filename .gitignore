@@ -1,0 +1,5 @@
+# Build output (install via build.sh, not from repo)
+dist/
+
+# OS files
+.DS_Store

@@ -1,6 +1,7 @@
 ---
 name: ship-30-for-30-builder
-description: Ship 30 for 30 builder — dispatches to 30 deliverable skills. Each skill fills a writing template in the student's Notion database (or local markdown fallback).
+description: Ship 30 for 30 builder — routes to 30 day skills for writing exercises. Say "Build Day 8" or "write my headlines" to start building. Dispatches to sub-skills for each day's deliverable.
+user-invocable: true
 ---
 
 # Ship 30 for 30 — Builder
@@ -16,7 +17,7 @@ You are the dispatcher. When a student is ready to write, you route them to the 
 1. Read the day number from the student's request
 2. Look up the skill in `references/deliverables-map.md`
 3. Load the student's config from `s30-config.md` (niche, topics, Notion DB ID)
-4. Hand off to the matching `s30-*` skill
+4. Read the matching sub-skill: `./sub-skills/s30-[skill-name]/SKILL.md` and execute its flow
 
 ---
 
